@@ -7,10 +7,11 @@ body {
 }
 
 .main-page-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.main-container, .content {
+.main-container,
+.content {
   width: 100%;
   margin: auto;
 }
@@ -67,7 +68,6 @@ body,
   margin-right: 10px;
 }
 
-
 .hamburger {
   background: transparent;
   border: none;
@@ -93,8 +93,10 @@ body,
 .navbar {
   display: flex;
   justify-content: center;
-  background-color: none; /* Warna latar belakang navbar */
-  padding: 10px 0; /* Padding atas bawah */
+  background-color: none;
+  /* Warna latar belakang navbar */
+  padding: 10px 0;
+  /* Padding atas bawah */
 }
 
 .navbar a {
@@ -118,7 +120,7 @@ body,
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0, 0.9);
+  background-color: white;
   overflow-y: hidden;
   transition: 0.5s;
 }
@@ -135,7 +137,7 @@ body,
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color: black;
   display: block;
   transition: 0.3s;
 }
@@ -143,6 +145,43 @@ body,
 .overlay a:hover,
 .overlay a:focus {
   color: #f1f1f1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a.border-bottom {
+  border-bottom: 1px solid #ccc;
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown .dropdown-content.clicked {
+  display: block;
+}
+
+.dropdown-content.clickable {
+  display: none;
 }
 
 .closebtn {
@@ -164,7 +203,8 @@ body,
   justify-content: center;
 }
 
-.content, .artikel {
+.content,
+.artikel {
   padding: 10px;
   box-sizing: border-box;
   margin: auto;
@@ -176,17 +216,16 @@ body,
 }
 
 .artikel p {
-    text-align: justify;
-    line-height: 2.0;
+  text-align: justify;
+  line-height: 2;
 }
 
 .artikel section {
-    text-align: justify;
+  text-align: justify;
 }
 
 ul {
-    line-height: 2.0;
-    text-align: justify;
+  line-height: 2;
 }
 
 article {
@@ -197,7 +236,8 @@ article section {
   margin-top: 20px;
 }
 
-.content img, .content video {
+.content img,
+.content video {
   width: 70%;
   max-width: 100%;
   height: auto;
@@ -236,8 +276,8 @@ article section {
 }
 
 .table-container {
-    width: 100%;
-    overflow-x: auto;
+  width: 100%;
+  overflow-x: auto;
 }
 
 table {
@@ -249,7 +289,6 @@ th,
 td {
   padding: 8px;
   border-bottom: 1px solid #ddd;
-  text-align: center;
 }
 
 th {
@@ -257,9 +296,9 @@ th {
 }
 
 .data-penduduk ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .responsive-map-container {
@@ -279,17 +318,22 @@ th {
 
 /* Gaya dasar untuk tampilan mobile */
 .maps .responsive-map-container {
-  width: 100%; /* Lebar kontainer peta sesuai dengan lebar layar */
-  padding-bottom: 56.25%; /* Aspect ratio untuk iframe peta (misalnya 16:9) */
-  position: relative; /* Digunakan untuk positioning iframe secara absolute */
+  width: 100%;
+  /* Lebar kontainer peta sesuai dengan lebar layar */
+  padding-bottom: 56.25%;
+  /* Aspect ratio untuk iframe peta (misalnya 16:9) */
+  position: relative;
+  /* Digunakan untuk positioning iframe secara absolute */
 }
 
 .maps .responsive-map {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100% !important; /* Pastikan iframe memenuhi kontainer */
-  height: 100% !important; /* Pastikan iframe memenuhi kontainer */
+  width: 100% !important;
+  /* Pastikan iframe memenuhi kontainer */
+  height: 100% !important;
+  /* Pastikan iframe memenuhi kontainer */
   border: 0;
 }
 
@@ -301,25 +345,9 @@ footer {
   box-sizing: border-box;
 }
 
-footer table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-footer td {
-  padding: 8px;
-  border: none;
-  font-size: 12px;
-}
-
-footer td:first-child {
-  width: 20%;
-  font-weight: bold;
-}
-
-table .foot {
-  text-align: left;
-  justify-content: left;
+.footer {
+  font-weight: 600;
+  text-align: center;
 }
 
 /* Sembunyikan hamburger menu pada layar yang lebih besar dari 768px */
@@ -337,25 +365,28 @@ table .foot {
   }
 
   .maps .responsive-map-container {
-    width: 80%; /* Atau sesuaikan dengan kebutuhan */
-    margin: 0 auto; /* Pusatkan kontainer peta */
-}
+    width: 80%;
+    /* Atau sesuaikan dengan kebutuhan */
+    margin: 0 auto;
+    /* Pusatkan kontainer peta */
+  }
 
-.maps .responsive-map {
+  .maps .responsive-map {
     /* Jika perlu, tambahkan gaya khusus untuk iframe di layar yang lebih besar */
-}
+  }
 
-.main-container {
-  margin: auto;
-  max-width: 100%;
-  padding: 0;
-}
+  .main-container {
+    margin: auto;
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 @media (min-width: 1024px) {
   .maps .responsive-map-container {
     /* Mengurangi tinggi peta pada layar yang lebih besar */
-    width: 60%; /* Sesuaikan nilai ini sesuai kebutuhan */
+    width: 60%;
+    /* Sesuaikan nilai ini sesuai kebutuhan */
   }
 }
 
@@ -376,11 +407,13 @@ table .foot {
     font-size: 30px;
   }
 
-  .content, .artikel {
+  .content,
+  .artikel {
     padding: 5px;
   }
 
-  .artikel p, .artikel h2 {
+  .artikel p,
+  .artikel h2 {
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -390,7 +423,34 @@ table .foot {
   }
 
   .gallery {
-    
   }
-}
 
+  .overlay-content {
+    text-align: center;
+  }
+
+  .overlay-content .dropdown-content {
+    position: static;
+    /* Menghilangkan positioning absolute */
+    margin: 0 auto;
+    /* Pusatkan */
+    box-shadow: none;
+    /* Opsi: hilangkan box shadow jika diinginkan */
+  }
+
+  .overlay-content .dropdown-content a {
+    padding: 10px;
+    text-align: center;
+    /* Teks link terpusat */
+  }
+
+  .dropdown:hover .dropdown-content,
+  .dropdown .dropdown-content.clicked {
+    display: none;
+  }
+
+  /* Opsi untuk menambahkan gaya tambahan jika Anda ingin dropdown tetap muncul saat di-tap */
+  /* .overlay-content .dropdown:hover .dropdown-content, .overlay-content .dropdown:focus .dropdown-content {
+    display: block;
+  } */
+}
